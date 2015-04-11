@@ -1,6 +1,10 @@
 # subnetting
 IPv4 subnetting script
 
-please pull req :(
+Document
+=
+-Turkce : http://www.ciscotr.com/subnetting-alt-aglara-bolme.html
+
+-English : http://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html
 
 tags: computer connections, ip4v, ipv6, subnetting.
