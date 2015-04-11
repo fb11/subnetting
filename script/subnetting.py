@@ -154,79 +154,80 @@ def getMaxComputerCount(machineId):
 		maxComputer *= 2
 	return maxComputer - 2
  
-from random import randint 
-import os
+if __name__ == "__main__":
+	from random import randint 
+	import os
 
-#clean terminal screen
-os.system("reset")
+	#clean terminal screen
+	os.system("reset")
 
-#declare array
-address = []
-binaryIp = "" #not array
-sweetAddress = ""
-ip = ""
-_class = ""
-subnetmaskbits = 0
-subnetId = ""
-machineId = ""
-subnetMask = ""
-subnetWork = ""
-subnetBroadcast = ""
-firstMachine = ""
-lastMachine = ""
-mainNetwork = ""
-maxSubnet = 0
-maxMachine = 0
+	#declare array
+	address = []
+	binaryIp = "" #not array
+	sweetAddress = ""
+	ip = ""
+	_class = ""
+	subnetmaskbits = 0
+	subnetId = ""
+	machineId = ""
+	subnetMask = ""
+	subnetWork = ""
+	subnetBroadcast = ""
+	firstMachine = ""
+	lastMachine = ""
+	mainNetwork = ""
+	maxSubnet = 0
+	maxMachine = 0
 
-for i in range(32):
-	address.append(0)
+	for i in range(32):
+		address.append(0)
 
-for i in range(len(address)): 
-	address[i] = randint(0,1)
+	for i in range(len(address)): 
+		address[i] = randint(0,1)
 
-for i in range(len(address)):
-	binaryIp += str(address[i])
+	for i in range(len(address)):
+		binaryIp += str(address[i])
 
-sweetAddress = sweetBinary(address)
-ip = binary2ip(address)
-_class = whatIsClass(address)
+	sweetAddress = sweetBinary(address)
+	ip = binary2ip(address)
+	_class = whatIsClass(address)
 
-if _class == "A":
-	subnetmaskbits = randint(9, 30)
-	subnetId = binaryIp[8:subnetmaskbits]
-	machineId = binaryIp[subnetmaskbits:]
-elif _class == "B":
-	subnetmaskbits = randint(17, 30)
-	subnetId = binaryIp[16:subnetmaskbits]
-	machineId = binaryIp[subnetmaskbits:]
-elif _class == "C":
-	subnetmaskbits = randint(25, 30)
-	subnetId = binaryIp[24:subnetmaskbits]
-	machineId = binaryIp[subnetmaskbits:]
+	if _class == "A":
+		subnetmaskbits = randint(9, 30)
+		subnetId = binaryIp[8:subnetmaskbits]
+		machineId = binaryIp[subnetmaskbits:]
+	elif _class == "B":
+		subnetmaskbits = randint(17, 30)
+		subnetId = binaryIp[16:subnetmaskbits]
+		machineId = binaryIp[subnetmaskbits:]
+	elif _class == "C":
+		subnetmaskbits = randint(25, 30)
+		subnetId = binaryIp[24:subnetmaskbits]
+		machineId = binaryIp[subnetmaskbits:]
 
-subnetMask = getSubnetMask(subnetId, _class)
-subnetWork = getSubnetWork(binaryIp, subnetId, _class)
-subnetBroadcast = getSubnetBroadcast(binaryIp, subnetId, _class)
-firstMachine = getFirstMachine(binaryIp, subnetmaskbits)
-lastMachine = getLastMachine(binaryIp, subnetmaskbits)
-mainNetwork = getMainNetwork(binaryIp, _class)
-maxSubnet = getMaxSubnetCount(subnetId)
-maxComputer = getMaxComputerCount(machineId)
+	subnetMask = getSubnetMask(subnetId, _class)
+	subnetWork = getSubnetWork(binaryIp, subnetId, _class)
+	subnetBroadcast = getSubnetBroadcast(binaryIp, subnetId, _class)
+	firstMachine = getFirstMachine(binaryIp, subnetmaskbits)
+	lastMachine = getLastMachine(binaryIp, subnetmaskbits)
+	mainNetwork = getMainNetwork(binaryIp, _class)
+	maxSubnet = getMaxSubnetCount(subnetId)
+	maxComputer = getMaxComputerCount(machineId)
 
-#print "[+] Binary address : "+binaryIp
-print "[+] Sweet binary address : "+sweetAddress
-print "[+] IP : "+ip
-print "[+] Subnet mask bits count : "+str(subnetmaskbits)
-print "[+] Class : "+_class
-print "[+] Subnet id : "+subnetId
-print "[+] Machine id : "+machineId
-print "[+] This is the "+str(int(subnetId, 2))+"th usable subnet in this class "+_class+" net."
-print "[+] This is the "+str(int(machineId, 2))+"th machine on this subnetwork."
-print "[+] Subnet mask : "+ subnetMask 
-print "[+] Subnet work : "+ subnetWork 
-print "[+] Subnet broadcast : "+ subnetBroadcast
-print "[+] First machine ip : "+ firstMachine
-print "[+] Last machine ip : "+ lastMachine
-print "[+] Main network : "+ mainNetwork
-print "[+] Maximum subnet count : "+ str(maxSubnet)
-print "[+] Maximum computer count : "+ str(maxComputer)
+	#print "[+] Binary address : "+binaryIp
+	print "[+] Sweet binary address : "+sweetAddress
+	print "[+] IP : "+ip
+	print "[+] Subnet mask bits count : "+str(subnetmaskbits)
+	print "[+] Class : "+_class
+	print "[+] Subnet id : "+subnetId
+	print "[+] Machine id : "+machineId
+	print "[+] This is the "+str(int(subnetId, 2))+"th usable subnet in this class "+_class+" net."
+	print "[+] This is the "+str(int(machineId, 2))+"th machine on this subnetwork."
+	print "[+] Subnet mask : "+ subnetMask 
+	print "[+] Subnet work : "+ subnetWork 
+	print "[+] Subnet broadcast : "+ subnetBroadcast
+	print "[+] First machine ip : "+ firstMachine
+	print "[+] Last machine ip : "+ lastMachine
+	print "[+] Main network : "+ mainNetwork
+	print "[+] Maximum subnet count : "+ str(maxSubnet)
+	print "[+] Maximum computer count : "+ str(maxComputer)
