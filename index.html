@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Learn Subnetting</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+	<style type="text/css">
+	body {
+		margin:10px;
+		padding: 10px;
+	}
+
+	.row {
+		font-size: 12px;
+		margin: 1px;
+	}
+
+	.form-group {
+		width:80px;
+	}
+
+	.alert-danger {
+		height:71px;
+		background-color: #95a5a6;
+		border: 1px solid #2c3e50;
+	}
+
+	.alert-info {
+		height:35px; 
+		padding:9px;
+		border: 1px solid #2c3e50;
+		background-color: #ecf0f1;
+		color: #2c3e50;
+	}
+
+	.form-control {
+		border: 1px solid #2c3e50;
+	}
+
+	#whichmachine {
+		width: 50px;
+		padding: 3px;	
+		margin-top: -4px;	
+	}
+
+	.info {
+		margin-bottom: 3px;
+	}
+	</style>
+</head>
+
+<body>
+<div class="container">
+<div class="col-md-6 column">
+	<div class="row clearfix" id="address">
+		<div class="col-md-13 column">
+			<div class="row clearfix alert alert-danger">
+				
+				<div class="col-md-3 column">
+					<div class="alert alert-info">Address</div>
+				</div>
+				
+				<div class="col-md-2 column">
+					<div class="form-group">       
+				        <input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-md-2 column">
+					<div class="form-group">       
+				        <input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-md-2 column">
+					<div class="form-group">       
+				        <input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-md-2 column">
+					<div class="form-group">       
+				        <input type="text" class="form-control">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row clearfix" id="address">
+		<div class="col-md-13 column">
+			<div class="row clearfix alert alert-danger">
+				
+				<div class="col-md-3 column">
+					<div class="alert alert-info">Subnet Mask</div>
+				</div>
+				
+				<div class="col-md-2 column">
+					<div class="form-group">       
+				        <input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-md-2 column">
+					<div class="form-group">       
+				        <input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-md-2 column">
+					<div class="form-group">       
+				        <input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-md-2 column">
+					<div class="form-group">       
+				        <input type="text" class="form-control">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row clearfix" id="address">
+		<div class="col-md-13 column">
+			<div class="row clearfix alert alert-danger">
+				
+				<div class="col-md-3 column">
+					<div class="alert alert-info">Subnet Work</div>
+				</div>
+				
+				<div class="col-md-2 column">
+					<div class="form-group">       
+				        <input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-md-2 column">
+					<div class="form-group">       
+				        <input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-md-2 column">
+					<div class="form-group">       
+				        <input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-md-2 column">
+					<div class="form-group">       
+				        <input type="text" class="form-control">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row clearfix" id="address">
+		<div class="col-md-13 column">
+			<div class="row clearfix alert alert-danger">
+				
+				<div class="col-md-3 column">
+					<div class="alert alert-info">Subnet BC</div>
+				</div>
+				
+				<div class="col-md-2 column">
+					<div class="form-group">       
+				        <input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-md-2 column">
+					<div class="form-group">       
+				        <input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-md-2 column">
+					<div class="form-group">       
+				        <input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-md-2 column">
+					<div class="form-group">       
+				        <input type="text" class="form-control">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row clearfix" id="address">
+		<div class="col-md-13 column">
+			<div class="row clearfix alert alert-danger">
+				
+				<div class="col-md-3 column">
+					<div class="alert alert-info">First Machine</div>
+				</div>
+				
+				<div class="col-md-2 column">
+					<div class="form-group">       
+				        <input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-md-2 column">
+					<div class="form-group">       
+				        <input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-md-2 column">
+					<div class="form-group">       
+				        <input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-md-2 column">
+					<div class="form-group">       
+				        <input type="text" class="form-control">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row clearfix" id="address">
+		<div class="col-md-13 column">
+			<div class="row clearfix alert alert-danger">
+				
+				<div class="col-md-3 column">
+					<div class="alert alert-info">Last Machine</div>
+				</div>
+				
+				<div class="col-md-2 column">
+					<div class="form-group">       
+				        <input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-md-2 column">
+					<div class="form-group">       
+				        <input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-md-2 column">
+					<div class="form-group">       
+				        <input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-md-2 column">
+					<div class="form-group">       
+				        <input type="text" class="form-control">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row clearfix" id="address">
+		<div class="col-md-13 column">
+			<div class="row clearfix alert alert-danger">
+				
+				<div class="col-md-3 column">
+					<div class="alert alert-info">Main Network</div>
+				</div>
+				
+				<div class="col-md-2 column">
+					<div class="form-group">       
+				        <input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-md-2 column">
+					<div class="form-group">       
+				        <input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-md-2 column">
+					<div class="form-group">       
+				        <input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-md-2 column">
+					<div class="form-group">       
+				        <input type="text" class="form-control">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="col-md-6 column">
+	<div class="row clearfix" id="address">
+		<div class="col-md-13 column info">
+			<div class="row clearfix alert alert-danger">
+				<div class="alert alert-info" >This is the <input id="whichmachine" type="text"/>th machine on this subnetwork.</div>
+			</div>
+		</div>
+		<div class="col-md-13 column info">
+			<div class="row clearfix alert alert-danger">			
+				<div class="alert alert-info" >This is the <input id="whichmachine" type="text"/>th usable subnet in this class <input id="whichmachine" type="text"/> net.</div>
+			</div>
+		</div>
+		<div class="col-md-13 column info">
+			<div class="row clearfix alert alert-danger">
+				<div class="alert alert-info" > <input id="whichmachine" type="text"/> usable subnets, with each <input id="whichmachine" type="text"/> machines maximum. </div>
+			</div>
+		</div>
+		<div class="col-md-13 column info">
+			<div class="row clearfix alert alert-danger">
+				<div>
+					<div class="dropdown">
+						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+					    This seems to be a
+					    	<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+						    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Valid Combination</a></li>
+						    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Invalid Combination: Machineaddress is the subnet.</a></li>
+						    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Invalid Combination: Machineaddress is local broadcast.</a></li>
+						    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Invalid Combination: Subnetbits in networkaddress are all 1s.</a></li>
+						    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Invalid Combination: This is the 0th subnet.</a></li>
+					  	</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- her elementin yanına gönderme butonu ekle ve ajax ile gönderme sağla. -->
+<!-- subnet + class yani ip/20 örneğin. bunu eklemeyi unutma. -->
+<!-- en sonuna tamamını gönderme butonu ekle ve bilgisayar indir vs. butonları ile veya bazı seçenekler ile tasarımı tam kare şekline getir.-->
+</div>
+</div>
+</body>
+</html>
